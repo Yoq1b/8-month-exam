@@ -1,0 +1,68 @@
+.marquee {
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  border: 2px dashed lightgray;
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+.marquee__content img {
+  max-width: 2rem;
+  width: 100%;
+  object-fit: contain;
+}
+
+.marquee__content > * {
+  flex: 0 0 auto;
+  color: white;
+  background: #e8daef;
+  margin: 2px;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.marquee__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  padding-left: 0;
+}
+
+/* Scrollbar o'lchami */
+.scrollable-div {
+  cursor: pointer;
+}
+.scrollable-div::-webkit-scrollbar {
+  width: 4px; /* Gorizontal scroll bar uchun balandlik */
+  height: 70px; /* Vertikal scroll bar uchun kenglik */
+}
+
+/* Scrollbar trek */
+.scrollable-div::-webkit-scrollbar-track {
+  background: #f8f7f3;
+}
+
+/* Scrollbar to'ldirgichi */
+.scrollable-div::-webkit-scrollbar-thumb {
+  background: #e5e2ee;
+  border-radius: 10px;
+}
+
+/* Scrollbar to'ldirgichining hover holati */
+.scrollable-div::-webkit-scrollbar-thumb:hover {
+  background: #088269;
+}
